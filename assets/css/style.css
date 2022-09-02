@@ -3,24 +3,35 @@
 *::after {
   box-sizing: border-box;
 }
+/* not allowing me to change content on css */
 
 html,
 body,
 .wrapper {
+  justify-content: center;
+  align-items: center;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
+/* tried to justify content to center... */
 body {
+ 
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+/*justify center wrapper */
+.wrapper h1 {
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -37,30 +48,43 @@ header {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
   max-width: 800px;
   padding: 30px 40px;
 }
 
-.card-header::after {
+.card-header {
   content: " ";
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  padding: 0px;
 }
 
 .card-body {
+  padding-top: 100px;
   min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-footer {
+  justify-content: center;
   text-align: center;
 }
 
-.card-footer::before {
+.card-footer {
   content: " ";
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
@@ -68,8 +92,7 @@ header {
 
 .card-footer::after {
   content: " ";
-  display: block;
-  clear: both;
+  display: flex;
 }
 
 .btn {
@@ -79,16 +102,20 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
 }
 
 button[disabled] {
+  justify-content: center;
+  align-items: center;
   cursor: default;
   background: #c0c7cf;
 }
